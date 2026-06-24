@@ -1,13 +1,24 @@
 import time
 
-input("Press Enter to start stopwatch")
+print("Welcome to the Stopwatch!")
 
-start_time = time.time()
+running = True
 
-input("Press Enter to stop stopwatch")
+while running:
 
-end_time = time.time()
+    input("Press Enter to start the stopwatch...")
+    start_time = time.time()
 
-elapsed_time = end_time - start_time
+    input("Press Enter to stop the stopwatch...")
+    end_time = time.time()
 
-print("Elapsed time:", elapsed_time, "seconds")
+    elapsed_time = end_time - start_time
+
+    print("Elapsed time:", elapsed_time, "seconds")
+
+    answer = input("Would you like to run the stopwatch again? (yes/no): ")
+
+    if answer == "no":
+        running = False
+
+print("Goodbye!")
